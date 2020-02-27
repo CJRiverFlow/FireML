@@ -3,9 +3,9 @@ Wildfire detection on edge devices using Tensorflow and OpenVINO
 
 Wildfires are unplanned and unwanted fires, including lightning-caused fires, unauthorized human-caused fires, and escaped prescribed fire projects.
 
-<center>
+<p align="center">
 <img src="images/firefighters.jpg"  width="700" height="400">
-</center>
+</p>
 
 Just from my country I can share the following statistics:
 * Wildfires devastate a total of 22,132 hectares of forests in 2019
@@ -25,35 +25,33 @@ Edge Device:
 Model was training in Coogle Colab with GPU Instance.
 
 
-##Getting the data 
+## Getting the data 
 I will be using a dataset of images with the labels in xml format. We will convert this data from .xml to TFRecord to be able to use the Tensorflow Object Detection Pipeline.
 
-##Converting the dataset and Model Training
+## Converting the dataset and Model Training
 Once we got the train.record and the test.record and the object-detection.pbtxt file we proceed with the enviroment preparatio and the training of the Object Detection model, this process is clerly described in the following Google Colab Notebook:
 https://colab.research.google.com/drive/1j5uQtf74f4ZWEinip5DavlWWtaqBbxGe
 
 
-##Converting the Tensorflow API model with OpenVino.
+## Converting the Tensorflow API model with OpenVino.
 I have followed the steps described in the official Openvino documentation to be able to run in the raspberry pi in a faster way:
 https://docs.openvinotoolkit.org/latest/_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_Object_Detection_API_Models.html 
 
 For this I'm actually trying to build a docker iamge and container to provide the trained model easy to use. I hope to be able to have this available soon.
 
-##Testing the model
+## Testing the model
 
 Testing on the pi camera I have used the video input to test the model so I could get teh following results, this are the first test on flame images:
 
-<center>
-<img src="images/test1.png"  width="700" height="400">
-</center>
 
-<center>
+<img src="images/test1.png"  width="700" height="400">
+
+
 <img src="images/test2.png"  width="700" height="400">
-</center>
 
 I will be adding more test results along the month.
 
-##What this project is trying to achieve
+## What this project is trying to achieve
 
 This project is not limited to train a Deep Learning model to detect fire, I have started to work on a dron able to use electronics similar to Raspberry pi to detect fire during its **programmed flying route** across a forest or protected area and when the model indicates the presence of fire it will a SMS with the coordinates to the Forest Ranger and a MMS with the photo of the model prediction, this is possible with a raspberry pi GSM module.
 
