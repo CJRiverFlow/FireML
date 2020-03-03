@@ -24,7 +24,7 @@ That's is why a reliable method to detect fires in less time is unvaluable to pr
 The main module of this prototype is build as follows: 
 
 <p align="center">
-<img src="images/rpi_assembly.jpg" width="50%" height="50%">
+<img src="images/rpi_hardware.jpg" width="50%" height="50%">
 </p>
 
 * Raspberry Pi 3b+
@@ -62,7 +62,7 @@ I'm actually working on building a docker container to provide the trained model
 
 ## Testing the model
 
-Testing on the Pi camera I have used the video input to test the model so I could get teh following results, these are the first test on flame images:
+Testing on the Pi camera I have used the video input to test the model so I could get very good results, these are the first test on flame images:
 
 <p align="center">
 <img src="images/test1.png"  width="700" height="400">
@@ -72,7 +72,7 @@ Testing on the Pi camera I have used the video input to test the model so I coul
 <img src="images/test2.png"  width="700" height="400">
 </p>
 
-I will be adding more test images on outside fires or videos available on internet during the next months.
+I will be adding more test images on outside fires or videos available on internet in the next weeks.
 
 ## What this project is trying to achieve
 
