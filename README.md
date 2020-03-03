@@ -1,5 +1,5 @@
 # Forest Fire detection with Machine Learning on Edge Devices.
-### Wildfire detection using Tensorflow and OpenVINO.
+### Wildfire detection using Tensorflow and OpenVINO on a Raspberry Pi.
 
 Wildfires are unplanned and unwanted fires, including lightning-caused fires, unauthorized human-caused fires, and escaped prescribed fire projects.
 
@@ -17,7 +17,7 @@ In one of the most recent catastrophies, the Forest Fires in **Australia** have 
 <img src="images/australian-fires.jpg"  width="700" height="400">
 </p>
 
-That's is why a reliable method to detect fires in less time is unvaluable to prevent its consecuences and protect the nature and people lives around it.
+That's is why a reliable method to detect fires in less time is unvaluable to prevent its consecuences protecting the nature and people lives around it.
 
 
 ## Hardware
@@ -40,24 +40,29 @@ Model was training in Coogle Colab with GPU Instance.
 
 
 ## Getting the data and convertion.
-I will be using a dataset of images with the labels in xml format. We will convert this data from .xml to TFRecord to be able to use the Tensorflow Object Detection Pipeline.
+I will be using a dataset of images with the labels in XML format from the FireNET project. As we will be using Tensorflow Detection API for this project we need to convert this data from .xml to TFRecord.
+
+For this step I have prepare a Google Colab notebook with all the steps needed for this task. 
+
+https://colab.research.google.com/drive/1Pa_gYtkOQ60drFRZoOIdHLahfEfOMTyw
 
 ## Using Tensorflow Object Detection API for Model Training.
-Once we got the train.record and the test.record and the object-detection.pbtxt file we proceed with the enviroment preparation and the training of the Object Detection model, this process is clearly described in the following Google Colab Notebook:
+Once we got the train.record and the test.record files we proceed with the enviroment preparation and the training of the Object Detection model, this process is clearly described in the following Google Colab Notebook:
 
 https://colab.research.google.com/drive/1j5uQtf74f4ZWEinip5DavlWWtaqBbxGe
 
+It is required also to upload the object-detection.pbtxt that you can find in this repository.
 
 ## Converting the Tensorflow API model with OpenVino.
 I have followed the steps described in the official Openvino documentation to be able to run in the raspberry pi with a better perfomance:
 
 https://docs.openvinotoolkit.org/latest/_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_Object_Detection_API_Models.html 
 
-For this I'm actually trying to build a docker image and container to provide the trained model easy to use. I hope to be able to have this available soon.
+I'm actually working on building a docker container to provide the trained model easy to use. I hope to be able to have this available soon.
 
 ## Testing the model
 
-Testing on the pi camera I have used the video input to test the model so I could get teh following results, this are the first test on flame images:
+Testing on the Pi camera I have used the video input to test the model so I could get teh following results, these are the first test on flame images:
 
 <p align="center">
 <img src="images/test1.png"  width="700" height="400">
