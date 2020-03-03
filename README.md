@@ -39,7 +39,7 @@ Future tests:
 Model was training in Coogle Colab with GPU Instance.
 
 
-## Getting the data and convertion.
+## Getting the data and format convertion.
 I will be using a dataset of images with the labels in XML format from the FireNET project. As we will be using Tensorflow Detection API for this project we need to convert this data from .xml to TFRecord.
 
 For this step I have prepare a Google Colab notebook with all the steps needed for this task. 
@@ -54,7 +54,7 @@ https://colab.research.google.com/drive/1j5uQtf74f4ZWEinip5DavlWWtaqBbxGe
 It is required also to upload the object-detection.pbtxt that you can find in this repository.
 
 ## Converting the Tensorflow API model with OpenVino.
-I have followed the steps described in the official Openvino documentation to be able to run in the raspberry pi with a better perfomance:
+Following the steps described in the official Openvino documentation is possible to convert and run in the raspberry pi with a better perfomance:
 
 https://docs.openvinotoolkit.org/latest/_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_Object_Detection_API_Models.html 
 
