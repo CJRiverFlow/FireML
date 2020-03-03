@@ -67,7 +67,7 @@ Testing on the pi camera I have used the video input to test the model so I coul
 <img src="images/test2.png"  width="700" height="400">
 </p>
 
-I will be adding more test images on outside fires during the next months.
+I will be adding more test images on outside fires or videos available on internet during the next months.
 
 ## What this project is trying to achieve
 
