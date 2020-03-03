@@ -39,7 +39,7 @@ Future tests:
 Model was training in Coogle Colab with GPU Instance.
 
 
-## Getting the data and format convertion.
+## Getting the data and format conversion.
 I will be using a dataset of images with the labels in XML format from the FireNET project. As we will be using Tensorflow Detection API for this project we need to convert this data from .xml to TFRecord.
 
 For this step I have prepare a Google Colab notebook with all the steps needed for this task. 
